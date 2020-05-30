@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1590166363660.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1682167573",
+    "id" : "FCF277D4",
+    "lastKnownWriteTime" : 1590456197,
+    "last_content_update" : 1590456197013,
+    "path" : "~/week 3-1/power_calculations_Ex.r",
+    "project_path" : "power_calculations_Ex.r",
+    "properties" : {
+        "cursorPosition" : "60,232",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

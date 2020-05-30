@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588798050982.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "694448227",
+    "id" : "D44877BA",
+    "lastKnownWriteTime" : 1588871381,
+    "last_content_update" : 1588871381209,
+    "path" : "~/week 2/random_variables.Rmd",
+    "project_path" : "random_variables.Rmd",
+    "properties" : {
+        "cursorPosition" : "15,16",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

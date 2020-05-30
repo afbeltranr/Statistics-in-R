@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588788408260.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "251009250",
+    "id" : "D7DFC734",
+    "lastKnownWriteTime" : 1588714022,
+    "last_content_update" : 1588714022,
+    "path" : "~/week 1/exploratory_data_analysis.Rmd",
+    "project_path" : "exploratory_data_analysis.Rmd",
+    "properties" : {
+        "cursorPosition" : "27,30",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589811839808.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1431466840",
+    "id" : "21555540",
+    "lastKnownWriteTime" : 1589811837,
+    "last_content_update" : 1589811837,
+    "path" : "~/week 3-1/power_calculations.Rmd",
+    "project_path" : "power_calculations.Rmd",
+    "properties" : {
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589394843209.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1993649146",
+    "id" : "3B759B7C",
+    "lastKnownWriteTime" : 1589423290,
+    "last_content_update" : 1589423290871,
+    "path" : "~/week 3-1/confidence_intervals.r",
+    "project_path" : "confidence_intervals.r",
+    "properties" : {
+        "cursorPosition" : "69,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

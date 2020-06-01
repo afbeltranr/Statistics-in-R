@@ -56,8 +56,8 @@ set.seed(1)
 generator4 <- function(n, mean = 0, sd = 1){
   sample1 <- rnorm(n, mean, sd)
   sample2 <- rnorm(n, mean, sd)
-  tsat <- t.test(sample1, sample2, var.equal = TRUE)$t.val
-return(tstat)  
+  tsat <- t.test(sample1, sample2, var.equal = TRUE)$statistic
+return(tsat)  
 }
 
 # First we generate the theoretical quantiles we will compare to. Starting from probabilities, or proportions expressed as percentiles:
@@ -82,9 +82,66 @@ par(mfrow= c(3,2))
 
 
   for(j in 1:6){
-  qqplot(qs[,j], quantiles[,j])  
+  qqplot(qs[,j], 
+         quantiles[,j],
+         xlab = "Theoretical t-dist quantiles",
+         ylab = " Monte Carlo t-dist. quantiles")  
+    abline(0,1)
   }
-  
 
-generator4(10)
+# Execise 5 
+
+# We've been generating samples from a normal distribution, in a continuous scale.
+
+# This exercise is about checking how a binary variable will be distributed, and if its distribution can be approximated by the t-distribution.
+
+
+generator5 <- function(n){
+  
+  sample <- sample(c(-1,1),n,replace=TRUE)
+  tstat <- sqrt(n)*mean(sample)/sd(sample)
+  return(tstat)
+}
+# Here we write our function for t tests for one random variable, in this case a binary variable that varies in c(-1,1).
+
+#Now we have to build our theoretical quantiles vector as before.
+b <- 100
+ps <- seq(1/(b+1), 1-1/(b+1), len=100 )#probabilities, percentiles.
+qs <- qt(ps, df=14)# Theoretical t-dist quantiles with 14 degrees of freedom
+
+#It is time to generate our Monte Carlo simulated quantiles for our binary data.
+
+ttests <- replicate(100, generator5(15))
+dev.off()
+qqplot(qs, ttests)
+abline(0,1)
+
+
+## Exercise 6
+
+
+# Now we will check if this approximation remains for big sample sizes, such as 1000
+ps <- seq(1/(b+1), 1-1/(b+1), len=1000 )#probabilities, percentiles.
+qs <- qt(ps, df=999)
+
+quantiles <- replicate(1000, generator5(1000))
+
+qqplot(qs,quantiles)
+abline(0,1)
+
+
+# Exercise 7 
+
+
+
+set.seed(1)
+Ns <- seq(5,45,5)
+par(mfrow=c(3,3))
+for(N in Ns){
+  medians <- replicate(10000, median ( rnorm(N) ) )
+  title <- paste("N=",N,", avg=",round( mean(medians), 2) , ", sd*sqrt(N)=", round( sd(medians)*sqrt(N),2) )
+  qqnorm(medians, main = title )
+  qqline(medians)
+}
+  
 

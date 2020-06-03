@@ -30,23 +30,61 @@ mean(ttests>2)
 
 b <- 100 
 
-ps <- seq(1/(B+1), 1-1/(B+1), len=b)
-qs <- qt(ps, df=4)
+ps <- seq(1/(b+1), 1-1/(b+1), len=b*10)
 Ns <- seq(5,30,5)
 
+generator3 <- function(n){
+  sample <- rnorm(n)
+  tstat <- sqrt(n)*mean(sample)/sd(sample)
+  return(tstat)
+}
+B <- 1000
+
+
 quantiles <-sapply(Ns, function(n){
-ttests <- replicate(100, generator(n))})
+ttests <- replicate(1000, generator3(n))})
 
 par(mfrow=c(3,2))
 for (i in 1:6){
-    qqplot(qs, 
+    qqplot(qt(ps, df=Ns[i]-1), 
            quantiles[,i],
            xlab = "Theoretical t-dist quantiles",
            ylab = " Monte Carlo t-dist. quantiles",
-           main=expression(paste("sample size =", Ns[i])))
+           main= "qqplot")
   abline(0,1)
   
-}# We can conclude that the t dist approximation works better for small sample sizes.
+}# We can conclude that the t dist approximation works for all sample sizes.
+        library(rafalib)
+mypar(3,2)
+
+Ns<-seq(5,30,5)
+B <- 1000
+mypar(3,2)
+
+LIM <- c(-4.5,4.5)
+
+for(N in Ns){
+  
+  ts <- replicate(B, {
+    
+    X <- rnorm(N)
+    
+    sqrt(N)*mean(X)/sd(X)
+    
+  })
+  
+  ps <- seq(1/(B+1),1-1/(B+1),len=B)
+  
+  qqplot(qt(ps,df=N-1),ts,main=N,
+         
+         xlab="Theoretical",ylab="Observed",
+         
+         xlim=LIM, ylim=LIM)
+  
+  abline(0,1)
+  
+}
+
 
 
 # exercise 4

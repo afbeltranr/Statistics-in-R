@@ -10,7 +10,6 @@ controlPopulation <- filter(dat, Sex == "F", Diet == "chow") %>% select(Bodyweig
 
 generator <- function(n){
   
-  
   cases <- sample(controlPopulation,n)
   controls <- sample(controlPopulation,n)
 tstat <- (mean(cases)-mean(controls)) / sqrt(var(cases)/n + var(controls)/n)  

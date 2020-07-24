@@ -9,7 +9,7 @@ library(rafalib)
 url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/babies.txt"
 filename <- basename(url)
 download(url, destfile=filename)
-babies <- read.table("babies.txt", header=TRUE)
+        babies <- read.table("babies.txt", header=TRUE)
 
 
 bwt.nonsmoke <- filter(babies, smoke == 0) %>% select(bwt) %>% unlist
